@@ -285,7 +285,6 @@ RUN rpm-ostree override remove \
 # Install new packages
 RUN rpm-ostree install \
         openvpn3-client \
-        cloudflare-warp \
         code \
         discover-overlay \
         python3-pip \
