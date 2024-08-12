@@ -144,9 +144,9 @@ jobs:
           command: |
             # pull the base images used for FROM in Containerfile so
             # we can retry on that unfortunately common failure case
-            sudo podman pull ${{ env.IMAGE_REGISTRY }}/${{ matrix.base_image_name }}-${{ matrix.base_image_flavor }}:${{ matrix.fedora_version }}
-            sudo podman pull ${{ env.IMAGE_REGISTRY }}/akmods:${{ matrix.kernel_flavor}}-${{ matrix.fedora_version }}
-            sudo podman pull ${{ env.IMAGE_REGISTRY }}/akmods-nvidia:${{ matrix.kernel_flavor}}-${{ matrix.fedora_version }}
+            sudo podman pull ghcr.io/ublue-os/${{ matrix.base_image_name }}-${{ matrix.base_image_flavor }}:${{ matrix.fedora_version }}
+            sudo podman pull ghcr.io/ublue-os/akmods:${{ matrix.kernel_flavor}}-${{ matrix.fedora_version }}
+            sudo podman pull ghcr.io/ublue-os/akmods-nvidia:${{ matrix.kernel_flavor}}-${{ matrix.fedora_version }}
 
             # Add rechunk as well to remove this source of failure
             sudo podman pull ghcr.io/hhd-dev/rechunk:v0.8.3
