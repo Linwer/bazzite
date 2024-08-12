@@ -353,6 +353,9 @@ RUN --mount=type=cache,dst=/var/cache/rpm-ostree \
     rpm-ostree install \
         openvpn3-client \
         code \
+	virt-install \
+	virt-manager \
+	virt-viewer \
         discover-overlay \
         python3-pip \
         libadwaita \
